@@ -1,0 +1,12 @@
+# ignore all
+/**/*.*
+
+# allow git
+!.gitignore
+
+# allow license
+!LICENSE
+!NOTICE
+
+# allow markdown
+!/**/*.md 
