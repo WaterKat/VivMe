@@ -12,55 +12,61 @@ A transform may contain 1 sprite, 1 mask, or both. Multiple masks should be plac
 
 ```json
 // sprite transform
-{ 
-    "name": "circle",
-    "parent": "global",
-    "transform": {
-        "matrix": [
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            0, 0, 0, 0
-        ] 
-    },
-    "sprite": {
-        "enabled": "true",
-        "material": "standard.material",
-        "mesh": "12x12.mesh",
-        "image": "circle.sprite",
-        "plugins": [
-            "shimmer.plugin"
-        ],
-        "masks": []
-    }, 
-    "mask": {
-        "enabled": "false",
-        "material": "transparent.material",
-        "mesh": "custom.mesh",
-        "image": "square.mask",
-        "plugins": [
-            "wavy.plugin"
-        ],
-        "masks": []
-    }
+{
+    "components": [
+        { 
+            "name": "circle",
+            "parent": "global",
+            "transform": {
+                "matrix": [
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0
+                ] 
+            },
+            "sprite": {
+                "enabled": "true",
+                "material": "standard.material",
+                "mesh": "12x12.mesh",
+                "image": "circle.sprite",
+                "plugins": [
+                    "shimmer.plugin"
+                ],
+                "masks": []
+            }, 
+            "mask": {
+                "enabled": "false",
+                "material": "transparent.material",
+                "mesh": "custom.mesh",
+                "image": "square.mask",
+                "plugins": [
+                    "wavy.plugin"
+                ],
+                "masks": []
+            }
+        }
+    ]
 }
 ```
 ```json
 /// indexed mesh json object
 {
-    "vertices": [
-        [ 0, 0, 0 ],
-        [ 0, 0, 1 ],
-        [ 0, 1, 1 ]
-    ],
-    "triangles": [
-        [ 0, 1, 2 ]
-    ],
-    "uvs": [
-        [ 0, 0 ], 
-        [ 0, 1 ], 
-        [ 1, 1 ]
-    ]
+    "mesh": {
+        "vertices": [
+            [ 0, 0, 0 ],
+            [ 0, 0, 1 ],
+            [ 0, 1, 1 ]
+        ],
+        "triangles": [
+            [ 0, 1, 2 ]
+        ],
+        "uvs": [
+            [ 0, 0 ], 
+            [ 0, 1 ], 
+            [ 1, 1 ]
+        ]
+    }
 }
 ```
 **note**
