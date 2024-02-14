@@ -7,6 +7,7 @@ The primary configuration file for VivMe projects is
 
 ```json
 {
-    
+    "name": "project-name",
+    ... //TODO Adding other configurationss
 }
 ```
